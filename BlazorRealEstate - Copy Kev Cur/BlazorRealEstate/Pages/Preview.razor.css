@@ -1,0 +1,74 @@
+﻿.simHead {
+    text-align: center;
+}
+
+.similar {
+    background: #90EE90;
+}
+
+.notsimilar {
+    background: #ee9090;
+}
+
+.images {
+    width: 300px;
+    height: 300px;
+}
+
+
+/*Beds or Similat elements below will change background colours depending on the value compared to the current listing value*/
+.beds {
+    text-align: left;
+    padding: 10px;
+    background: #90EE90;
+}
+
+.baths {
+    text-align: left;
+    padding: 10px;
+    background: #ee9090;
+}
+
+.feet {
+    text-align: left;
+    padding: 10px;
+}
+
+.location {
+    text-align: left;
+    padding: 10px;
+}
+
+.price {
+    text-align: left;
+    padding: 10px;
+}
+
+/*End Similar Elements*/
+
+.column {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    text-align: center;
+    height: 600px;
+    border: solid;
+}
+
+.Hcolumn {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    text-align: center;
+    height: 600px;
+}
+
+.column1 {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    text-align: center;
+    height: 350px;
+    background-color: red;
+}
+

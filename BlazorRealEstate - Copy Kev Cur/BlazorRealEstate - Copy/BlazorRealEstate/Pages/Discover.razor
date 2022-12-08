@@ -1,0 +1,132 @@
+﻿@page "/discover"
+<PageTitle>Discovery</PageTitle>
+
+<h1 class="page-title">Discovery</h1>
+
+<div class="question">
+    <p>Select three properties.</p>
+</div>
+
+<div class="column">
+</div>
+<div class="column">
+    <img src="./1.png" class="images" />
+</div>
+<div class="column">
+    <img src="./2.png" class="images" />
+</div>
+<div class="column">
+    <img src="./3.png" class="images" />
+</div>
+<div class="column">
+</div>
+
+<div class="column">
+</div>
+<div class="column">
+
+    <img src="./4.png" class="images" />
+</div>
+<div class="column">
+
+    <img src="./5.png" class="images" />
+</div>
+<div class="column">
+
+    <img src="./6.png" class="images" />
+</div>
+<div class="column">
+</div>
+
+<div class="column">
+</div>
+<div class="column">
+
+    <img src="./7.png" class="images" />
+</div>
+<div class="column">
+
+    <img src="./8.png" class="images" />
+</div>
+<div class="column">
+
+    <img src="./9.png" class="images" />
+</div>
+<div class="column">
+</div>
+
+
+
+<div class="question">
+    <p>How much do you value space.</p>
+</div>
+
+<div>
+    <div class="slider">
+        <input type="range" id="slider-input" min="1" max="5" @bind="spaceValue" @bind:event="oninput" step="1">
+    </div>
+</div>
+<hr />
+<div class="value-column">
+    <div class="options">Not at all</div>
+</div>
+<div class="value-column">
+</div>
+<div class="value-column">
+</div>
+<div class="value-column">
+</div>
+<div class="value-column">
+    <div class="options">Very much</div>
+</div>
+
+
+
+<div class="question">
+    <p>How many people will be moving in.</p>
+</div>
+
+<div>
+    <div class="slider">
+        <input type="range" id="slider-input" min="1" max="5" @bind="peopleValue" @bind:event="oninput" step="1">
+    </div>
+</div>
+<hr />
+<div class="value-column">
+    <div class="options">1</div>
+</div>
+<div class="value-column">
+
+    <div class="options">2</div>
+</div>
+<div class="value-column">
+
+    <div class="options">3</div>
+</div>
+<div class="value-column">
+
+    <div class="options">4</div>
+</div>
+<div class="value-column">
+    <div class="options">5+</div>
+</div>
+
+
+@code {
+
+    string spaceValue;
+    string peopleValue;
+
+    string SelectSpace
+    {
+        get => spaceValue;
+        set { spaceValue = value; }
+    }
+
+    string SelectPeople
+    {
+        get => peopleValue;
+        set { peopleValue = value; }
+    }
+
+}
