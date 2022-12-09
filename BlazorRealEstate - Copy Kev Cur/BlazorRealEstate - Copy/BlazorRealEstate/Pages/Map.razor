@@ -1,0 +1,52 @@
+﻿@page "/Map"
+
+<PageTitle>Map</PageTitle>
+
+<button type="button" class="collapsible">Change Filters</button>
+<div class="content">
+    <Filter />
+</div>
+
+
+
+
+<div class="map">
+
+    <div class="neighbourhood">
+
+        <img class="image" src ="MapNW.png">
+        <div class="hoverClick">Selected</div>
+
+    </div>
+
+
+    <div class="neighbourhood2">
+        <img class="image" src="MapNE.png">
+        <div class="hoverOverlay">NE Calgary </div>
+    </div>
+
+    <button type="button">Zoom In</button>
+    <button type="button">Zoom Out</button>
+
+    <div class="neighbourhood">
+        <img class="image" src ="MapSE.png">
+        <div class="hoverClick">Selected</div>
+    </div>
+
+    <div class="neighbourhood">
+        <img class="image" src="MapSW.png">
+        <div class="hoverClick">Selected</div>
+    </div>
+
+    <button type="buttonApply">Apply Selection</button>
+
+</div>
+
+
+
+
+
+@code {
+        
+}
+

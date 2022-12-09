@@ -1,0 +1,145 @@
+﻿filter-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.italic-title {
+    font-style: italic;
+}
+
+text {
+    font-size: 15px;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.price {
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+#slider-input-left {
+    overflow: hidden;
+    width: 100%;
+}
+
+#min-text {
+    overflow: hidden;
+    width: 20%;
+    height: auto;
+}
+
+#min-slider {
+    text-align: center;
+    width: 80%;
+}
+
+#max-text {
+    overflow: hidden;
+    width: 20%;
+    height: auto;
+}
+
+#white-space {
+    overflow: hidden;
+    width: 21%;
+    height: auto;
+}
+
+#max-slider {
+    text-align: center;
+    width: 80%;
+}
+
+.one-to-eight {
+    float: left;
+    width: 7.8%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.btn-column {
+    font-size: 25px;
+    float: left;
+    width: 25%;
+    padding: 10px;
+    text-align: center;
+    height: 70px;
+}
+
+.full-column {
+    font-size: 25px;
+    float: left;
+    width: 100%;
+    text-align: center;
+    height: 1px;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    pointer-events: none;
+}
+
+
+
+input[type='range']::-webkit-slider-thumb {
+    pointer-events: auto;
+}
+
+input[type=range] {
+    height: 23px;
+    pointer-events: none;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+}
+
+    input[type=range]:focus {
+        outline: none;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 7px;
+        cursor: pointer;
+        box-shadow: 0px 0px 0px #000000;
+        background: #FF8787;
+        border-radius: 50px;
+        border: 0px solid #000000;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+
+        border: 3px solid #C90000;
+        height: 23px;
+        width: 23px;
+        border-radius: 50px;
+        background: #FF0000;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -7.5px;
+    }
+
+#max-slider input[type=range]::-webkit-slider-thumb {
+    box-shadow: -10000px 0px 0px 9985px #FF8787;
+}
+
+#min-slider input[type=range]::-webkit-slider-thumb {
+    box-shadow: 10000px 0px 0px 9985px #FF8787;
+}
+
+input[type=range]::-webkit-slider-thumb:before {
+    box-shadow: -80px 80px 0px 65px blue;
+}
+
+    input[type=range]:focus::-webkit-slider-runnable-track {
+        background: #FF8787;
+    }
