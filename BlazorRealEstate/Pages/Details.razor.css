@@ -357,6 +357,18 @@
     background: rgb(0,255,0,0.2);
 }
 
+.dgray {
+    display: inline;
+    color: #ddd;
+    text-shadow: none;
+    font-size: 25px
+}
+.lgray {
+    display: inline;
+    color: #eee;
+    text-shadow: none;
+    font-size: 25px
+}
 
 .House-column {
     display: inline-block;

@@ -48,32 +48,32 @@ else{
             {
                 <p1 class="c1">Details</p1>
                 <p1 class="c2">Neighbourgood Amenities</p1>
-                <p1 class="c3">Price: &#160 &#160 &#160 &#160 $@SelectPrice</p1>
-                <p1 class="c4">Bedrooms: @prop.bedrooms</p1>
-                <p1 class="c5">Bathrooms: @prop.bathrooms</p1>
-                <p1 class="c6">Square Footage: @prop.sqrft ft&#178</p1>
+                <p1 class="c3">Price:<div class="dgray">..................</div>$@SelectPrice</p1>
+                <p1 class="c4">Bedrooms:<div class="lgray">.........................</div>@prop.bedrooms<div class="lgray">..............</div></p1>
+                <p1 class="c5">Bathrooms:<div class="dgray">.........................</div>@prop.bathrooms<div class="dgray">...............</div></p1>
+                <p1 class="c6">Square Footage:<div class="lgray">......................</div>@prop.sqrft ft&#178<div class="lgray">................</div></p1>
                 if (@prop.dwelling == 1)
                 {
-                    <p1 class="c7">Property Type: Apartment </p1>
+                    <p1 class="c7">Property Type:<div class="dgray">.................</div>Apartment<div class="dgray">.........</div></p1>
                 }
                 if (@prop.dwelling == 2)
                 {
-                    <p1 class="c7">Property Type: Condominium  </p1>
+                    <p1 class="c7">Property Type:<div class="dgray">................</div>Condominium<div class="dgray">........</div></p1>
                 }
                 if (@prop.dwelling == 3)
                 {
-                    <p1 class="c7">Property Type: Detached </p1>
+                    <p1 class="c7">Property Type:<div class="dgray">.....................</div>Detached<div class="dgray">.............</div></p1>
                 }
                 if (@prop.dwelling == 4)
                 {
-                    <p1 class="c7">Property Type: Duplex  </p1>
+                    <p1 class="c7">Property Type:<div class="dgray">..................</div>Duplex<div class="dgray">...........</div></p1>
                 }
 
-                <p1 class="c8">Year Built: @prop.year</p1>
-                <p1 class="c9">Neighbourgood: @prop.neighborhoods_name</p1>
-                <p1 class="c10">Schools: 3</p1>
-                <p1 class="c11">Train station: 5 minute walk</p1>
-                <p1 class="c12">Parks/Lakes: 4</p1>
+                <p1 class="c8">Year Built:<div class="lgray">........................</div>@prop.year<div class="lgray">.........</div></p1>
+                <p1 class="c9" style="text-align:left;"><div class="lgray">...........</div>Neighbourgood:<div class="lgray">.........</div>@prop.neighborhoods_name</p1>
+                <p1 class="c10" style="text-align:left;"><div class="dgray">.......................</div>Schools:<div class="dgray">..................</div>3</p1>
+                <p1 class="c11" style="text-align:left;"><div class="lgray">...............</div>Train station:<div class="lgray">........</div>5 minute walk</p1>
+                <p1 class="c12" style="text-align:left;"><div class="dgray">................</div>Parks/Lakes:<div class="dgray">..................</div>4</p1>
                 <button class="realtor" onclick=@RealtorInfo>Realtor Information</button>
 
                 @if (RealInfo == 1) {

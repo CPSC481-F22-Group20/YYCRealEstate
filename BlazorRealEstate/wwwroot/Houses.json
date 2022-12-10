@@ -50,8 +50,8 @@
     "bathrooms": 2,
     "sqrft": 1015,
     "price": 350000,
-    "neighbornumber": 1,
-    "neighborhoods_name": "Sage Hill",
+    "neighbornumber": 21,
+    "neighborhoods_name": "Downtown",
     "year": 2009
   },
   {
@@ -362,8 +362,8 @@
     "bathrooms": 6,
     "sqrft": 2357,
     "price": 699000,
-    "neighbornumber": 8,
-    "neighborhoods_name": "Kelvin Grove",
+    "neighbornumber": 21,
+    "neighborhoods_name": "Downtown",
     "year": 2012
   },
   {
@@ -373,8 +373,8 @@
     "bathrooms": 2,
     "sqrft": 2493,
     "price": 699999,
-    "neighbornumber": 8,
-    "neighborhoods_name": "Eagle Ridge",
+    "neighbornumber": 21,
+    "neighborhoods_name": "Downtown",
     "year": 2009
   },
   {
@@ -384,8 +384,8 @@
     "bathrooms": 2,
     "sqrft": 2492,
     "price": 675999,
-    "neighbornumber": 4,
-    "neighborhoods_name": "Pineridge",
+    "neighbornumber": 21,
+    "neighborhoods_name": "Downtown",
     "year": 2022
   },
   {
@@ -406,8 +406,8 @@
     "bathrooms": 2,
     "sqrft": 2200,
     "price": 689000,
-    "neighbornumber": 15,
-    "neighborhoods_name": "Cliff Bungalow",
+    "neighbornumber": 21,
+    "neighborhoods_name": "Downtown",
     "year": 2017
   },
 
