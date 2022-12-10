@@ -1,0 +1,1016 @@
+﻿@page "/"
+@page "/{data}"
+
+@inject HttpClient Http
+@inject NavigationManager NavManager
+<PageTitle>Index</PageTitle>
+
+<h1 class = "page-title">YYC REAL ESTATES</h1>
+
+
+
+<div class="row">
+    <div class="column">
+        <filter-title class="italic-title" style="align-content:center;">
+            Dwellings
+            <br />
+            <div class="column" style="width:100%;">
+                <text>
+                    <label class="container">
+                        Apartment
+                        <input type="checkbox" @bind=Apartment>
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container">
+                        Condominium 
+                        <input type="checkbox" @bind=Condominium>
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container">
+                        Detached 
+                        <input type="checkbox" @bind=Detached>
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container">
+                        Duplex  
+                        <input type="checkbox" @bind=Duplex>
+                        <span class="checkmark"></span>
+                    </label>
+                </text>
+            </div>
+        </filter-title>
+    </div>
+    <div class="column">
+        <filter-title class="italic-title">
+            Bedrooms
+            <br>
+            <text>
+                Min:
+                <select class="filter" @bind="@SelectMinBed">
+
+                    @foreach (var beds in NumbList)
+                    {
+
+                        <option value="@beds.Number"> @beds.Number </option>
+                    }
+
+                </select>
+                <br>
+                Max:
+                <select class="filter" @bind="@SelectMaxBed">
+
+                    @foreach (var beds in NumbList)
+                    {
+
+                        <option value="@beds.Number"> @beds.Number </option>
+                    }
+
+                </select>
+            </text>
+        </filter-title>
+    </div>
+    <div class="column">
+        <filter-title class="italic-title">
+            Bathrooms
+            <br>
+            <text>
+                Min:
+                <select class="filter" @bind="@SelectMinBaths">
+
+                    @foreach (var numbs in NumbList)
+                    {
+
+                        <option value="@numbs.Number"> @numbs.Number </option>
+                    }
+
+                </select>
+                <br>
+                Max:
+                <select class="filter" @bind="@SelectMaxBaths">
+
+                    @foreach (var beds in NumbList)
+                    {
+
+                        <option value="@beds.Number"> @beds.Number </option>
+                    }
+
+                </select>
+            </text>
+        </filter-title>
+    </div>
+    <div class="column">
+        <filter-title class="italic-title">
+            SquareFeet
+            <br>
+            <text>
+                Select one:
+                <select class="filter" @bind="@SelectSquareft">
+
+                    @foreach (var numbs in SqftList)
+                    {
+
+                        <option value="@numbs.Sqfeet"> @numbs.Sqfeet </option>
+                    }
+
+                </select>
+            </text>
+        </filter-title>
+    </div>
+</div>
+
+<div>
+    <h1 class="range-price">
+        Price Range
+        <br />
+        <text class="range-prices">$@SelectMinPrice - $@SelectMaxPrice</text>
+    </h1>
+</div>
+
+<div class="range-column-txt" id="min-text">
+    <text>
+        Min Price:
+        <br />
+        <input type="number" @bind="minPrice" />
+    </text>
+</div>
+<div class="range-column-slider" id="min-slider">
+    <input type="range" id="slider-input-left" style=@minWidth min="0" max=@minLimit @bind="minPrice" @bind:event="oninput" @onfocus="ChangeinMin" @onchange="ChangeMin" step="10000">
+</div>
+<div class="range-column-txt" id="max-text">
+    <text>
+        Max Price:
+        <br />
+        <input type="number" @bind="maxPrice" />
+
+    </text>
+</div>
+
+
+<div class="range-column-txt" id="min-text" style="height:12px;">
+    <text>
+    </text>
+</div>
+<div class="range-column-slider" id="max-slider" style="height:12px;">
+    <input type="range" id="slider-input-right" style=@maxWidth min=@maxLimit max="2000000" @bind="maxPrice" @bind:event="oninput" @onfocus="ChangeinMax" @onchange="ChangeMax" step="10000">
+</div>
+<div class="range-column-txt" id="max-text" style="height:12px;">
+    <text>
+    </text>
+</div>
+
+
+@if (minTop == 1)
+{
+    <div class="range-column-txt" id="min-text" style="height:12px;">
+        <text>
+        </text>
+    </div>
+    <div class="range-column-slider" id="min-slider" style="height:12px;top: -82px;">
+        <input type="range" id="slider-input-left" style=@minWidth min="0" max=@minLimit @bind="minPrice" @bind:event="oninput" @onfocus="ChangeinMin" @onchange="ChangeMin" step="10000">
+    </div>
+    <div class="range-column-txt" id="max-text" style="height:12px;">
+        <text>
+        </text>
+    </div>
+
+}
+@if (minTop == 0)
+{
+    <div class="range-column-txt" id="min-text" style="height:12px;">
+        <text>
+        </text>
+    </div>
+    <div class="range-column-slider" id="min-slider" style="height:12px;top: -82px;">
+    </div>
+    <div class="range-column-txt" id="max-text" style="height:12px;">
+        <text>
+        </text>
+    </div>
+}
+
+
+<div class="range-column-prices" style="width: 7%;">
+    <text>
+
+    </text>
+</div>
+<div class="range-column-prices" style="width: 17.2%">
+    <text>
+        $0
+    </text>
+</div>
+<div class="range-column-prices" style="width: 17.2%">
+    <text>
+        $500,000
+    </text>
+</div>
+<div class="range-column-prices" style="width: 17.2%">
+    <text>
+
+        $1,000,000
+    </text>
+</div>
+<div class="range-column-prices" style="width: 17.2%">
+    <text>
+
+        $1,500,000
+    </text>
+</div>
+<div class="range-column-prices" style="width: 17.2%">
+    <text>
+
+        $2,000,000
+    </text>
+</div>
+<div class="range-column-prices" style="width: 7%">
+    <text>
+
+    </text>
+</div>
+
+<div class="btn-column">
+</div>
+<div class="btn-column">
+    <button type="button" onclick=@MapBtn>Map Preview</button>
+</div>
+<div class="btn-column">
+        <button type="button" onclick=@ListingsBtn>Listing Preview</button>
+</div>
+<div class="btn-column">
+</div>
+
+<div class="line" >
+    <hr />
+</div>
+<br />
+<h3 class="index-full-column" id="discovery-title">Do you need help looking for a house?</h3>
+<div class="index-btn-column">
+    <NavLink href="discover">
+        <button type="button">Click Here!</button>
+    </NavLink>
+</div>
+
+<div class="line">
+    <hr />
+</div>
+
+<div class="listings-btn-column">
+    <select name="tools" id="tools" @bind=sort>
+        <option value="Ascending">Sort by Price: Ascending</option>
+        <option value="Descending">Sort By Price: Descending</option>
+        <option value="Newest">Sort By Newest to Oldest</option>
+        <option value="Oldest">Sort By Oldest to Newest</option>
+    </select>
+</div>
+
+
+@if (sort == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    @if (sort.Equals("Ascending"))
+    {
+        @if (Price_Ascending == null)
+        {
+            <p><em>Loading...</em></p>
+        }
+        else
+        {
+            @foreach (var house in Price_Ascending)
+            {
+
+                {
+                    <div class="House-column">
+                        <img src=@ImagePath(@house.Id) alt="Listing#1" style="width:100%"><br /><br />
+                        <img class="deets" src="Bed.png">
+                        <p1>@house.bedrooms Beds</p1><br />
+                        <img class="deets" src="Bath.png">
+                        <p1>@house.bathrooms Baths</p1><br />
+                        <img class="deets" src="Sqfeet.png">
+                        <p1>@FormatInt(@house.sqrft) ft&#178</p1><br />
+                        <img class="deets" src="Location.png">
+                        <p1>@house.neighborhoods_name</p1><br />
+                        <img class="deets" src="price.png">
+                        <p1>@FormatInt(@house.price)</p1>
+
+                        @if (@house.Id == 1)
+                        {
+                            <div class="listings-btn-column">
+                                <button type="button" onclick=@Details1>Detailed View</button>
+                            </div>
+                        }
+                        else
+                        {
+                            @if (@house.Id == 2)
+                            {
+                                <div class="listings-btn-column">
+                                    <button type="button" onclick=@Details2>Detailed View</button>
+                                </div>
+                            }
+                            else
+                            {
+                                @if (@house.Id == 3)
+                                {
+                                    <div class="listings-btn-column">
+                                        <button type="button" onclick=@Details3>Detailed View</button>
+                                    </div>
+                                }
+                                else
+                                {
+                                    @if (@house.Id == 4)
+                                    {
+                                        <div class="listings-btn-column">
+                                            <button type="button" onclick=@Details4>Detailed View</button>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        @if (@house.Id == 5)
+                                        {
+                                            <div class="listings-btn-column">
+                                                <button type="button" onclick=@Details5>Detailed View</button>
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="listings-btn-column">
+                                                <button type="button">Detailed View</button>
+                                            </div>
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+
+
+
+                    </div>
+
+                }
+            }
+        }
+    }
+    @if (sort.Equals("Descending"))
+    {
+        @if (Price_Descending == null)
+        {
+            <p><em>Loading...</em></p>
+        }
+        else
+        {
+            @foreach (var house in Price_Descending)
+            {
+
+                {
+                    <div class="House-column">
+                        <img src=@ImagePath(@house.Id) alt="Listing#1" style="width:100%"><br /><br />
+                        <img class="deets" src="Bed.png">
+                        <p1>@house.bedrooms Beds</p1><br />
+                        <img class="deets" src="Bath.png">
+                        <p1>@house.bathrooms Baths</p1><br />
+                        <img class="deets" src="Sqfeet.png">
+                        <p1>@FormatInt(@house.sqrft) ft&#178</p1><br />
+                        <img class="deets" src="Location.png">
+                        <p1>@house.neighborhoods_name</p1><br />
+                        <img class="deets" src="price.png">
+                        <p1>@FormatInt(@house.price)</p1>
+
+                        @if (@house.Id == 1)
+                        {
+                            <div class="listings-btn-column">
+                                <button type="button" onclick=@Details1>Detailed View</button>
+                            </div>
+                        }
+                        else
+                        {
+                            @if (@house.Id == 2)
+                            {
+                                <div class="listings-btn-column">
+                                    <button type="button" onclick=@Details2>Detailed View</button>
+                                </div>
+                            }
+                            else
+                            {
+                                @if (@house.Id == 3)
+                                {
+                                    <div class="listings-btn-column">
+                                        <button type="button" onclick=@Details3>Detailed View</button>
+                                    </div>
+                                }
+                                else
+                                {
+                                    @if (@house.Id == 4)
+                                    {
+                                        <div class="listings-btn-column">
+                                            <button type="button" onclick=@Details4>Detailed View</button>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        @if (@house.Id == 5)
+                                        {
+                                            <div class="listings-btn-column">
+                                                <button type="button" onclick=@Details5>Detailed View</button>
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="listings-btn-column">
+                                                <button type="button">Detailed View</button>
+                                            </div>
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+
+
+
+                    </div>
+
+                }
+            }
+        }
+    }
+    @if (sort.Equals("Newest"))
+    {
+        @if (Year_Descending == null)
+        {
+            <p><em>Loading...</em></p>
+        }
+        else
+        {
+            @foreach (var house in Year_Descending)
+            {
+
+                {
+                    <div class="House-column">
+                        <img src=@ImagePath(@house.Id) alt="Listing#1" style="width:100%"><br /><br />
+                        <img class="deets" src="Bed.png">
+                        <p1>@house.bedrooms Beds</p1><br />
+                        <img class="deets" src="Bath.png">
+                        <p1>@house.bathrooms Baths</p1><br />
+                        <img class="deets" src="Sqfeet.png">
+                        <p1>@FormatInt(@house.sqrft) ft&#178</p1><br />
+                        <img class="deets" src="Location.png">
+                        <p1>@house.neighborhoods_name</p1><br />
+                        <img class="deets" src="price.png">
+                        <p1>@FormatInt(@house.price)</p1>
+
+                        @if (@house.Id == 1)
+                        {
+                            <div class="listings-btn-column">
+                                <button type="button" onclick=@Details1>Detailed View</button>
+                            </div>
+                        }
+                        else
+                        {
+                            @if (@house.Id == 2)
+                            {
+                                <div class="listings-btn-column">
+                                    <button type="button" onclick=@Details2>Detailed View</button>
+                                </div>
+                            }
+                            else
+                            {
+                                @if (@house.Id == 3)
+                                {
+                                    <div class="listings-btn-column">
+                                        <button type="button" onclick=@Details3>Detailed View</button>
+                                    </div>
+                                }
+                                else
+                                {
+                                    @if (@house.Id == 4)
+                                    {
+                                        <div class="listings-btn-column">
+                                            <button type="button" onclick=@Details4>Detailed View</button>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        @if (@house.Id == 5)
+                                        {
+                                            <div class="listings-btn-column">
+                                                <button type="button" onclick=@Details5>Detailed View</button>
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="listings-btn-column">
+                                                <button type="button">Detailed View</button>
+                                            </div>
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+
+
+
+                    </div>
+
+                }
+            }
+        }
+    }
+    @if (sort.Equals("Oldest"))
+    {
+        @if (Year_Ascending == null)
+        {
+            <p><em>Loading...</em></p>
+        }
+        else
+        {
+            @foreach (var house in Year_Ascending)
+            {
+
+                {
+                    <div class="House-column">
+                        <img src=@ImagePath(@house.Id) alt="Listing#1" style="width:100%"><br /><br />
+                        <img class="deets" src="Bed.png">
+                        <p1>@house.bedrooms Beds</p1><br />
+                        <img class="deets" src="Bath.png">
+                        <p1>@house.bathrooms Baths</p1><br />
+                        <img class="deets" src="Sqfeet.png">
+                        <p1>@FormatInt(@house.sqrft) ft&#178</p1><br />
+                        <img class="deets" src="Location.png">
+                        <p1>@house.neighborhoods_name</p1><br />
+                        <img class="deets" src="price.png">
+                        <p1>@FormatInt(@house.price)</p1>
+
+                        @if (@house.Id == 1)
+                        {
+                            <div class="listings-btn-column">
+                                <button type="button" onclick=@Details1>Detailed View</button>
+                            </div>
+                        }
+                        else
+                        {
+                            @if (@house.Id == 2)
+                            {
+                                <div class="listings-btn-column">
+                                    <button type="button" onclick=@Details2>Detailed View</button>
+                                </div>
+                            }
+                            else
+                            {
+                                @if (@house.Id == 3)
+                                {
+                                    <div class="listings-btn-column">
+                                        <button type="button" onclick=@Details3>Detailed View</button>
+                                    </div>
+                                }
+                                else
+                                {
+                                    @if (@house.Id == 4)
+                                    {
+                                        <div class="listings-btn-column">
+                                            <button type="button" onclick=@Details4>Detailed View</button>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        @if (@house.Id == 5)
+                                        {
+                                            <div class="listings-btn-column">
+                                                <button type="button" onclick=@Details5>Detailed View</button>
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="listings-btn-column">
+                                                <button type="button">Detailed View</button>
+                                            </div>
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+
+
+
+                    </div>
+
+                }
+            }
+
+        }
+    }
+}
+
+
+@code{
+
+    [Parameter] public string data { get; set; }
+
+    Boolean Apartment = false;
+    Boolean Condominium = false;
+    Boolean Detached = false;
+    Boolean Duplex = false;
+    string minBeds = "1";
+    string maxBeds = "8";
+    string minBaths = "1";
+    string maxBaths = "8";
+    string squareft = "500+";
+    string minPrice = "0";
+    string maxPrice = "2000000";
+
+    void Details1()
+    {
+        NavManager.NavigateTo("Details/House1");
+    }
+    void Details2()
+    {
+        NavManager.NavigateTo("Details/House2");
+    }
+    void Details3()
+    {
+        NavManager.NavigateTo("Details/House3");
+    }
+    void Details4()
+    {
+        NavManager.NavigateTo("Details/House4");
+    }
+    void Details5()
+    {
+        NavManager.NavigateTo("Details/House5");
+    }
+    protected override void OnParametersSet()
+    {
+        if (data != null)
+        {
+            if (data.ElementAt(0) == '1')
+            {
+                Apartment = true;
+            }
+            else
+            {
+                Apartment = false;
+            }
+            if (data.ElementAt(1) == '1')
+            {
+                Condominium = true;
+            }
+            else
+            {
+                Condominium = false;
+            }
+            if (data.ElementAt(2) == '1')
+            {
+                Detached = true;
+            }
+            else
+            {
+                Detached = false;
+            }
+            if (data.ElementAt(3) == '1')
+            {
+                Duplex = true;
+            }
+            else
+            {
+                Duplex = false;
+            }
+            minBeds = data.ElementAt(4).ToString();
+            maxBeds = data.ElementAt(5).ToString();
+            minBaths = data.ElementAt(6).ToString();
+            maxBaths = data.ElementAt(7).ToString();
+            if (data.ElementAt(8) == '5')
+            {
+                squareft = "500+";
+            }
+            else
+            {
+                squareft = data.Substring(8, 5);
+            }
+
+        }
+
+    }
+
+    string SelectMinBed
+    {
+        get => minBeds;
+        set { minBeds = value; }
+    }
+
+    string SelectMaxBed
+    {
+        get => maxBeds;
+        set { maxBeds = value; }
+    }
+
+    string SelectMinBaths
+    {
+        get => minBaths;
+        set { minBaths = value; }
+    }
+
+    string SelectMaxBaths
+    {
+        get => maxBaths;
+        set { maxBaths = value; }
+    }
+
+    string SelectSquareft
+    {
+        get => squareft;
+        set { squareft = value; }
+    }
+
+
+    List<Sqft> SqftList = new List<Sqft>() { new Sqft("500+"), new Sqft("1000+"), new Sqft("1500+"), new Sqft("2000+"), new Sqft("2500+"), new Sqft("3000+") };
+
+    public class Sqft
+    {
+
+        public Sqft(string sqfeet)
+        {
+            Sqfeet = sqfeet;
+        }
+        public string Sqfeet { get; set; }
+
+    }
+
+
+    List<Numbs> NumbList = new List<Numbs>() { new Numbs("1"), new Numbs("2"), new Numbs("3"), new Numbs("4"), new Numbs("5"), new Numbs("6"), new Numbs("7"), new Numbs("8") };
+
+    public class Numbs
+    {
+
+        public Numbs(string number)
+        {
+            Number = number;
+        }
+        public string Number { get; set; }
+
+    }
+
+
+    void MapBtn() {
+
+        string link = "map/";
+
+        if (!Apartment && !Condominium && !Detached && !Duplex)
+        {
+            link += "1111";
+        }
+        else
+        {
+            if (!Apartment)
+            {
+                link += "0";
+            }
+            else
+            {
+                link += "1";
+            }
+            if (!Condominium)
+            {
+                link += "0";
+            }
+            else
+            {
+                link += "1";
+            }
+            if (!Detached)
+            {
+                link += "0";
+            }
+            else
+            {
+                link += "1";
+            }
+            if (!Duplex)
+            {
+                link += "0";
+            }
+            else
+            {
+                link += "1";
+            }
+        }
+
+        link += minBeds;
+        link += maxBeds;
+        link += minBaths;
+        link += maxBaths;
+        link += squareft;
+        link += minPrice;
+        link += "$";
+        link += maxPrice;
+        link += "$";
+
+
+        for (int i = 0; i < 23; i++)
+        {
+            link += "0";
+        }
+
+        NavManager.NavigateTo(link);
+
+    }
+
+
+    void ListingsBtn()
+    {
+
+        string link = "listings/";
+
+        if (!Apartment && !Condominium && !Detached && !Duplex)
+        {
+            link += "1111";
+        }
+        else
+        {
+            if (!Apartment)
+            {
+                link += "0";
+            }
+            else
+            {
+                link += "1";
+            }
+            if (!Condominium)
+            {
+                link += "0";
+            }
+            else
+            {
+                link += "1";
+            }
+            if (!Detached)
+            {
+                link += "0";
+            }
+            else
+            {
+                link += "1";
+            }
+            if (!Duplex)
+            {
+                link += "0";
+            }
+            else
+            {
+                link += "1";
+            }
+        }
+
+        link += minBeds;
+        link += maxBeds;
+        link += minBaths;
+        link += maxBaths;
+        link += squareft;
+        link += minPrice;
+        link += "$";
+        link += maxPrice;
+        link += "$";
+
+        for (int i = 0; i < 23; i++) {
+            link += "1";
+        }
+
+
+
+
+        NavManager.NavigateTo(link);
+
+    }
+
+
+    string minLimit = "1950000";
+    string minWidth = "width: 97.5%;";
+
+
+    string maxLimit = "50000";
+    string maxWidth = "width: 97.5%;";
+
+    int minTop = 1;
+    double temp;
+
+
+    void ChangeMin()
+    {
+        maxLimit = (Int64.Parse(minPrice) + 50000).ToString();
+        temp = (100.00 - (((double)(Int64.Parse(maxLimit)) / 2000000.00) * 100.00));
+        maxWidth = "width: " + temp.ToString() + "%;";
+
+
+    }
+
+
+    void ChangeMax()
+    {
+
+        minTop = 1;
+        minLimit = (Int64.Parse(maxPrice) - 50000).ToString();
+        temp = ((((double)(Int64.Parse(minLimit)) / 2000000.00) * 100.00));
+        minWidth = "width: " + temp.ToString() + "%;";
+
+
+    }
+
+
+    async Task ChangeinMin()
+    {
+        minTop = 1;
+    }
+
+    async Task ChangeinMax()
+    {
+        minTop = 0;
+    }
+
+
+    string SelectMinPrice
+    {
+        get => String.Format("{0:n0}", Int64.Parse(minPrice));
+        set { minPrice = value; }
+    }
+
+    string SelectMaxPrice
+    {
+        get => String.Format("{0:n0}", Int64.Parse(maxPrice));
+        set { maxPrice = value; }
+    }
+
+
+
+    public House[] all_houses;
+    public House[] Price_Ascending;
+    public House[] Price_Descending;
+    public House[] Year_Ascending;
+    public House[] Year_Descending;
+    public string sort { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        all_houses = await Http.GetFromJsonAsync<House[]>("Houses.json");
+        sort = "Ascending";
+        Price_Ascending = all_houses.OrderBy(House => House.price).ToArray();
+        Price_Descending = all_houses.OrderBy(House => House.price).ToArray();
+        Array.Reverse(Price_Descending);
+        Year_Ascending = all_houses.OrderBy(House => House.year).ToArray();
+        Year_Descending = all_houses.OrderBy(House => House.year).ToArray();
+        Array.Reverse(Year_Descending);
+    }
+
+    string ImagePath(int i)
+    {
+        return "House Images/house" + (i).ToString() + "_1.jpg";
+    }
+
+    string FormatInt(int var)
+    {
+        return String.Format("{0:n0}", Int64.Parse(var.ToString()));
+    }
+
+
+
+    string DetailedView(int var)
+    {
+        return String.Format("{0:n0}", Int64.Parse(var.ToString()));
+    }
+    string GetLink()
+    {
+        string link = "discover2/";
+        // link += (data + spaceValue + peopleValue);
+        return link;
+    }
+
+
+    public class House
+    {
+
+        public int Id { get; set; }
+
+        public int dwelling { get; set; }
+
+        public int bedrooms { get; set; }
+
+        public int bathrooms { get; set; }
+
+        public int sqrft { get; set; }
+
+        public int price { get; set; }
+
+        public int neighborhoods { get; set; }
+
+        public string? neighborhoods_name { get; set; }
+
+        public int year { get; set; }
+
+    }
+
+}

@@ -1,0 +1,613 @@
+[
+  {
+    "id": 1,
+    "dwelling": 3,
+    "bedrooms": 4,
+    "bathrooms": 5,
+    "sqrft": 2655,
+    "price": 870000,
+    "year": 2013,
+    "neighbornumber": 3,
+    "neighborhoods_name": "Saddleridge"
+  },
+  {
+    "id": 2,
+    "dwelling": 3,
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "sqrft": 2689,
+    "price": 869900,
+    "neighbornumber": 3,
+    "neighborhoods_name": "Taradale",
+    "year": 2020
+  },
+  {
+    "id": 3,
+    "dwelling": 2,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "sqrft": 886,
+    "price": 300000,
+    "neighbornumber": 1,
+    "neighborhoods_name": "Simons Valley",
+    "year": 2014
+  },
+  {
+    "id": 4,
+    "dwelling": 4,
+    "bedrooms": 3,
+    "bathrooms": 4,
+    "sqrft": 1567,
+    "price": 799900,
+    "neighbornumber": 1,
+    "neighborhoods_name": "Nolan Hill",
+    "year": 2019
+  },
+  {
+    "id": 5,
+    "dwelling": 1,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "sqrft": 1015,
+    "price": 350000,
+    "neighbornumber": 1,
+    "neighborhoods_name": "Sage Hill",
+    "year": 2009
+  },
+  {
+    "id": 6,
+    "dwelling": 3,
+    "bedrooms": 3,
+    "bathrooms": 1,
+    "sqrft": 1014,
+    "price": 329900,
+    "neighbornumber": 1,
+    "neighborhoods_name": "Sage Hill",
+    "year": 2014
+  },
+  {
+    "id": 7,
+    "dwelling": 3,
+    "bedrooms": 4,
+    "bathrooms": 5,
+    "sqrft": 2862,
+    "price": 900000,
+    "neighbornumber": 3,
+    "neighborhoods_name": "Saddleridge",
+    "year": 1991
+  },
+  {
+    "id": 8,
+    "dwelling": 3,
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "sqrft": 2740,
+    "price": 899900,
+    "neighbornumber": 3,
+    "neighborhoods_name": "Saddleridge",
+    "year": 2018
+  },
+  {
+    "id": 9,
+    "dwelling": 3,
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "sqrft": 2878,
+    "price": 824900,
+    "neighbornumber": 3,
+    "neighborhoods_name": "Taradale",
+    "year": 2019
+  },
+  {
+    "id": 10,
+    "dwelling": 3,
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "sqrft": 2475,
+    "price": 800000,
+    "neighbornumber": 3,
+    "neighborhoods_name": "Taradale",
+    "year": 2019
+  },
+  {
+    "id": 11,
+    "dwelling": 1,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "sqrft": 1034,
+    "price": 315000,
+    "neighbornumber": 1,
+    "neighborhoods_name": "Royal Vista",
+    "year": 2011
+  },
+  {
+    "id": 12,
+    "dwelling": 1,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "sqrft": 897,
+    "price": 367000,
+    "neighbornumber": 1,
+    "neighborhoods_name": "Royal Vista",
+    "year": 2013
+  },
+  {
+    "id": 13,
+    "dwelling": 1,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "sqrft": 1156,
+    "price": 340000,
+    "neighbornumber": 2,
+    "neighborhoods_name": "Coventry Hills",
+    "year": 2009
+  },
+  {
+    "id": 14,
+    "dwelling": 2,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "sqrft": 967,
+    "price": 270000,
+    "neighbornumber": 18,
+    "neighborhoods_name": "Huntington Hills",
+    "year": 2012
+  },
+  {
+    "id": 15,
+    "dwelling": 2,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "sqrft": 1129,
+    "price": 320000,
+    "neighbornumber": 18,
+    "neighborhoods_name": "Beddington Heights",
+    "year": 2016
+  },
+  {
+    "id": 16,
+    "dwelling": 2,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "sqrft": 1243,
+    "price": 325000,
+    "neighbornumber": 2,
+    "neighborhoods_name": "Country Hills",
+    "year": 2018
+  },
+  {
+    "id": 17,
+    "dwelling": 4,
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "sqrft": 1457,
+    "price": 829900,
+    "neighbornumber": 18,
+    "neighborhoods_name": "Thorncliffe",
+    "year": 2020
+  },
+  {
+    "id": 18,
+    "dwelling": 4,
+    "bedrooms": 3,
+    "bathrooms": 4,
+    "sqrft": 1895,
+    "price": 850000,
+    "neighbornumber": 18,
+    "neighborhoods_name": "Huntington Hills",
+    "year": 2016
+  },
+  {
+    "id": 19,
+    "dwelling": 4,
+    "bedrooms": 4,
+    "bathrooms": 5,
+    "sqrft": 2178,
+    "price": 900000,
+    "neighbornumber": 2,
+    "neighborhoods_name": "Coventry Hills",
+    "year": 2019
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "id": 20,
+    "dwelling": 3,
+    "bedrooms": 6,
+    "bathrooms": 5,
+    "sqrft": 2258,
+    "price": 834900,
+    "neighbornumber": 3,
+    "neighborhoods_name": "Skyview Ranch",
+    "year": 2021
+  },
+  {
+    "id": 21,
+    "dwelling": 3,
+    "bedrooms": 6,
+    "bathrooms": 5,
+    "sqrft": 2432,
+    "price": 799000,
+    "neighbornumber": 3,
+    "neighborhoods_name": "Martindale",
+    "year": 2021
+  },
+  {
+    "id": 22,
+    "dwelling": 3,
+    "bedrooms": 6,
+    "bathrooms": 4,
+    "sqrft": 2083,
+    "price": 755000,
+    "neighbornumber": 6,
+    "neighborhoods_name": "Bowness",
+    "year": 2006
+  },
+  {
+    "id": 23,
+    "dwelling": 3,
+    "bedrooms": 5,
+    "bathrooms": 5,
+    "sqrft": 2140,
+    "price": 699900,
+    "neighbornumber": 4,
+    "neighborhoods_name": "Temple",
+    "year": 2012
+  },
+  {
+    "id": 24,
+    "dwelling": 3,
+    "bedrooms": 6,
+    "bathrooms": 5,
+    "sqrft": 2055,
+    "price": 699000,
+    "neighbornumber": 5,
+    "neighborhoods_name": "Tuscany",
+    "year": 2009
+  },
+  {
+    "id": 25,
+    "dwelling": 3,
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "sqrft": 2009,
+    "price": 674999,
+    "neighbornumber": 18,
+    "neighborhoods_name": "Beddington Heights",
+    "year": 2022
+  },
+  {
+    "id": 26,
+    "dwelling": 3,
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "sqrft": 1940,
+    "price": 679999,
+    "neighbornumber": 18,
+    "neighborhoods_name": "Huntington Hills",
+    "year": 2017
+  },
+  {
+    "id": 27,
+    "dwelling": 3,
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "sqrft": 2453,
+    "price": 699000,
+    "neighbornumber": 1,
+    "neighborhoods_name": "Simons Valley",
+    "year": 2017
+  },
+
+
+
+
+
+
+
+
+
+
+  {
+    "id": 28,
+    "dwelling": 1,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "sqrft": 2134,
+    "price": 825000,
+    "neighbornumber": 9,
+    "neighborhoods_name": "Abbydale",
+    "year": 2021
+  },
+  {
+    "id": 29,
+    "dwelling": 1,
+    "bedrooms": 2,
+    "bathrooms": 3,
+    "sqrft": 2189,
+    "price": 764000,
+    "neighbornumber": 5,
+    "neighborhoods_name": "Arbour Lake",
+    "year": 2021
+  },
+  {
+    "id": 30,
+    "dwelling": 1,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "sqrft": 2150,
+    "price": 745000,
+    "neighbornumber": 14,
+    "neighborhoods_name": "Palliser",
+    "year": 2006
+  },
+  {
+    "id": 31,
+    "dwelling": 1,
+    "bedrooms": 4,
+    "bathrooms": 6,
+    "sqrft": 2357,
+    "price": 699000,
+    "neighbornumber": 8,
+    "neighborhoods_name": "Kelvin Grove",
+    "year": 2012
+  },
+  {
+    "id": 32,
+    "dwelling": 1,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "sqrft": 2493,
+    "price": 699999,
+    "neighbornumber": 8,
+    "neighborhoods_name": "Eagle Ridge",
+    "year": 2009
+  },
+  {
+    "id": 33,
+    "dwelling": 1,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "sqrft": 2492,
+    "price": 675999,
+    "neighbornumber": 4,
+    "neighborhoods_name": "Pineridge",
+    "year": 2022
+  },
+  {
+    "id": 34,
+    "dwelling": 1,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "sqrft": 1891,
+    "price": 699999,
+    "neighbornumber": 9,
+    "neighborhoods_name": "Monterey Park",
+    "year": 2017
+  },
+  {
+    "id": 35,
+    "dwelling": 1,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "sqrft": 2200,
+    "price": 689000,
+    "neighbornumber": 15,
+    "neighborhoods_name": "Cliff Bungalow",
+    "year": 2017
+  },
+
+
+
+
+  {
+    "id": 36,
+    "dwelling": 2,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "sqrft": 2480,
+    "price": 799000,
+    "neighbornumber": 20,
+    "neighborhoods_name": "Renfrew",
+    "year": 2021
+  },
+  {
+    "id": 37,
+    "dwelling": 2,
+    "bedrooms": 2,
+    "bathrooms": 3,
+    "sqrft": 2444,
+    "price": 834900,
+    "neighbornumber": 6,
+    "neighborhoods_name": "Mantgomery",
+    "year": 2021
+  },
+  {
+    "id": 38,
+    "dwelling": 2,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "sqrft": 2224,
+    "price": 699900,
+    "neighbornumber": 22,
+    "neighborhoods_name": "Fairview",
+    "year": 2006
+  },
+  {
+    "id": 39,
+    "dwelling": 2,
+    "bedrooms": 4,
+    "bathrooms": 6,
+    "sqrft": 2272,
+    "price": 755000,
+    "neighbornumber": 11,
+    "neighborhoods_name": "Mahogany",
+    "year": 2012
+  },
+  {
+    "id": 40,
+    "dwelling": 2,
+    "bedrooms": 2,
+    "bathrooms": 3,
+    "sqrft": 2457,
+    "price": 699000,
+    "neighbornumber": 14,
+    "neighborhoods_name": "Palliser",
+    "year": 2009
+  },
+  {
+    "id": 41,
+    "dwelling": 2,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "sqrft": 2180,
+    "price": 680000,
+    "neighbornumber": 23,
+    "neighborhoods_name": "Bonavista Downs",
+    "year": 2022
+  },
+  {
+    "id": 42,
+    "dwelling": 2,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "sqrft": 2344,
+    "price": 652000,
+    "neighbornumber": 14,
+    "neighborhoods_name": "Pump Hill",
+    "year": 2017
+  },
+  {
+    "id": 43,
+    "dwelling": 2,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "sqrft": 2433,
+    "price": 699000,
+    "neighbornumber": 22,
+    "neighborhoods_name": "Alyth",
+    "year": 2017
+  },
+
+
+
+
+
+
+
+
+
+  {
+    "id": 44,
+    "dwelling": 4,
+    "bedrooms": 6,
+    "bathrooms": 5,
+    "sqrft": 1949,
+    "price": 854900,
+    "neighbornumber": 8,
+    "neighborhoods_name": "MayFair",
+    "year": 2021
+  },
+  {
+    "id": 45,
+    "dwelling": 4,
+    "bedrooms": 6,
+    "bathrooms": 5,
+    "sqrft": 2155,
+    "price": 800000,
+    "neighbornumber": 17,
+    "neighborhoods_name": "Tuxedo Park",
+    "year": 2021
+  },
+  {
+    "id": 46,
+    "dwelling": 4,
+    "bedrooms": 6,
+    "bathrooms": 4,
+    "sqrft": 2180,
+    "price": 755000,
+    "neighbornumber": 3,
+    "neighborhoods_name": "Falconridge",
+    "year": 2006
+  },
+  {
+    "id": 47,
+    "dwelling": 4,
+    "bedrooms": 5,
+    "bathrooms": 5,
+    "sqrft": 2052,
+    "price": 699900,
+    "neighbornumber": 12,
+    "neighborhoods_name": "Somerset",
+    "year": 2012
+  },
+  {
+    "id": 48,
+    "dwelling": 4,
+    "bedrooms": 6,
+    "bathrooms": 5,
+    "sqrft": 2159,
+    "price": 698000,
+    "neighbornumber": 17,
+    "neighborhoods_name": "MT Pleasant",
+    "year": 2009
+  },
+  {
+    "id": 49,
+    "dwelling": 4,
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "sqrft": 2237,
+    "price": 660000,
+    "neighbornumber": 11,
+    "neighborhoods_name": "Mahogany",
+    "year": 2022
+  },
+  {
+    "id": 50,
+    "dwelling": 4,
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "sqrft": 1915,
+    "price": 670000,
+    "neighbornumber": 2,
+    "neighborhoods_name": "Country Hills",
+    "year": 2017
+  },
+  {
+    "id": 51,
+    "dwelling": 4,
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "sqrft": 1846,
+    "price": 699000,
+    "neighbornumber": 7,
+    "neighborhoods_name": "Springbank Hill",
+    "year": 2017
+  }
+
+
+
+
+
+
+
+
+
+
+
+]
