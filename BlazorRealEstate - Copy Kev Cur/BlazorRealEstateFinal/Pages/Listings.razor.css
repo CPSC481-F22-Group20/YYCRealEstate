@@ -1,0 +1,517 @@
+﻿.page-title {
+    color: black;
+    text-align: center;
+    text-shadow: 2px 2px 2px gray;
+}
+
+.error-msg {
+    color: black;
+    font-size: 70px;
+    font-style: italic;
+    text-align: center;
+    text-shadow: 3px 3px 3px gray;
+}
+
+.listings-btn-column {
+    font-size: 20px;
+    float: left;
+    width: 100%;
+    padding: 10px;
+    text-align: right;
+    height: 70px;
+}
+
+
+.deets {
+    width: 8%;
+    height: 8%;
+}
+
+
+.House-column {
+    display: inline-block;
+    width: 33.33%;
+    padding: 5px;
+}
+
+
+.mapdiv {
+    width: 70%;
+}
+
+/*https://www.w3schools.com/howto/howto_js_collapsible.asp*/
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    float: right;
+    font-size: 20px;
+}
+
+.content {
+    padding: 0 18px;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    display: block;
+}
+
+.mapdiv path {
+    fill: transparent;
+    fill-opacity: 0.7;
+    fill-rule: evenodd;
+    stroke: Black;
+    stroke-width: 1px;
+    stroke-linecap: butt;
+    stroke-linejoin: miter;
+    stroke-opacity: 1
+}
+
+
+.calgary_map {
+    position: fixed;
+    left: 0%;
+}
+
+.Neighborhoods_list {
+    font-size: 30px;
+    float: left;
+    padding: 10px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    background: #aaa;
+    position: fixed;
+    left: 75%;
+    top: 12%;
+    width: 20%;
+    text-align: center;
+}
+
+.mapApply {
+    font-size: 30px;
+    float: left;
+    padding: 10px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    background: #aaa;
+    position: fixed;
+    left: 75%;
+    top: 80%;
+    width: 20%;
+    text-align: center;
+}
+
+div ul {
+    font-weight: 100;
+    font-size: 25px;
+    list-style: none;
+    position: fixed;
+    background: #ddd;
+    left: 75%;
+    top: 18.5%;
+    width: 20%;
+    height: 60%;
+    text-align: left;
+}
+
+div ul {
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.page-title {
+    color: black;
+    text-align: center;
+    font-style: italic;
+    text-shadow: 2px 2px 2px gray;
+    font-size: 100px
+}
+
+
+.line {
+    font-size: 25px;
+    float: left;
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    background-color: white;
+}
+
+#discovery-title {
+    color: black;
+    text-align: center;
+    font-style: italic;
+    text-shadow: 1px 1px 1px gray;
+    font-size: 30px
+}
+
+.index-btn-column {
+    font-size: 20px;
+    float: left;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    height: 70px;
+}
+
+.index-full-column {
+    font-size: 25px;
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+filter-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.italic-title {
+    font-style: italic;
+}
+
+.row text {
+    font-size: 15px;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.price {
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+#slider-input-left {
+    overflow: hidden;
+    width: 100%;
+}
+
+#min-text {
+    overflow: hidden;
+    width: 20%;
+    height: auto;
+}
+
+#min-slider {
+    text-align: center;
+    width: 80%;
+}
+
+#max-text {
+    overflow: hidden;
+    width: 20%;
+    height: auto;
+}
+
+#white-space {
+    overflow: hidden;
+    width: 21%;
+    height: auto;
+}
+
+#max-slider {
+    text-align: center;
+    width: 80%;
+}
+
+.one-to-eight {
+    float: left;
+    width: 7.8%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.btn-column {
+    font-size: 25px;
+    float: left;
+    width: 25%;
+    padding: 10px;
+    text-align: center;
+    height: 70px;
+}
+
+.full-column {
+    font-size: 25px;
+    float: left;
+    width: 100%;
+    text-align: center;
+    height: 1px;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    pointer-events: none;
+}
+
+
+
+input[type='range']::-webkit-slider-thumb {
+    pointer-events: auto;
+}
+
+input[type=range] {
+    height: 23px;
+    pointer-events: none;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+}
+
+    input[type=range]:focus {
+        outline: none;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 7px;
+        cursor: pointer;
+        box-shadow: 0px 0px 0px #000000;
+        background: #FF8787;
+        border-radius: 50px;
+        border: 0px solid #000000;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+        border: 3px solid #C90000;
+        height: 23px;
+        width: 23px;
+        border-radius: 50px;
+        background: #FF0000;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -7.5px;
+    }
+
+#max-slider input[type=range]::-webkit-slider-thumb {
+    box-shadow: -10000px 0px 0px 9985px #FF8787;
+}
+
+#min-slider input[type=range]::-webkit-slider-thumb {
+    box-shadow: 10000px 0px 0px 9985px #FF8787;
+}
+
+input[type=range]::-webkit-slider-thumb:before {
+    box-shadow: -80px 80px 0px 65px blue;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #FF8787;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.range-slider-bar {
+    top: -121px;
+    height: 5px;
+    border-radius: 5px;
+    background: blue;
+    position: relative;
+    margin-left: 11.5px;
+    margin-right: 11.5px;
+}
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.range-column-txt input {
+    -moz-appearance: textfield;
+}
+
+.range-price {
+    text-align: center;
+    font-style: italic;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.range-prices {
+    font-weight: 100;
+}
+
+
+input[type="range"]::-webkit-slider-thumb {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+
+
+input[type=range] {
+    pointer-events: none;
+}
+
+    input[type=range]::-webkit-slider-thumb {
+        pointer-events: auto;
+    }
+
+.range-column-txt {
+    float: left;
+    width: 15%;
+    text-align: center;
+}
+
+.range-column-slider {
+    width: 70%;
+    height: 70px;
+    float: left;
+    padding-top: 12px;
+    justify-content: center;
+}
+
+.range-column-prices {
+    position: relative;
+    top: -40px;
+    overflow: visible;
+    float: left;
+    text-align: center;
+    height: 40px;
+    font-style: italic;
+    font-size: 25px;
+}
+
+#slider-input-left {
+    position: absolute;
+    left: 0%;
+    overflow: hidden;
+    width: 90%;
+}
+
+#slider-input-right {
+    top: -58px;
+    position: absolute;
+    right: 0%;
+    overflow: hidden;
+    width: 10%;
+}
+
+#min-text {
+    overflow: hidden;
+    width: 15%;
+    height: 70px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+    #min-text input {
+        overflow: hidden;
+        width: 50%;
+        text-align: center;
+        height: auto;
+    }
+
+#min-slider {
+    position: relative;
+    text-align: center;
+    width: 70%;
+}
+
+#max-text {
+    overflow: hidden;
+    width: 15%;
+    height: 70px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+    #max-text input {
+        overflow: hidden;
+        width: 50%;
+        text-align: center;
+        height: auto;
+    }
+
+#white-space {
+    overflow: hidden;
+    width: 21%;
+    height: auto;
+}
+
+#max-slider {
+    position: relative;
+    text-align: center;
+    width: 70%;
+}
+
+.range-one-to-eight {
+    float: left;
+    width: 7.8%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+input[type=range] {
+    -webkit-appearance: none;
+    pointer-events: none;
+}
+
+
+
+input[type='range']::-webkit-slider-thumb {
+    pointer-events: auto;
+}
+
+input[type=range] {
+    height: 23px;
+    pointer-events: none;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+}
+
+    input[type=range]:focus {
+        outline: none;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 7px;
+        cursor: pointer;
+        box-shadow: 0px 0px 0px #000000;
+        background: #FF8787;
+        border-radius: 50px;
+        border: 0px solid #000000;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+        border: 3px solid #C90000;
+        height: 23px;
+        width: 23px;
+        border-radius: 50px;
+        background: #FF0000;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -8px;
+    }
+
+#max-slider input[type=range]::-webkit-slider-thumb {
+    box-shadow: -10000px 0px 0px 9988.5px #FF8787;
+}
+
+#min-slider input[type=range]::-webkit-slider-thumb {
+    box-shadow: 10000px 0px 0px 9985px #FF8787;
+}
+
+.range-small-redbar {
+    top: -121px;
+    height: 7px;
+    border-radius: 5px;
+    background: #FF8787;
+    position: relative;
+}

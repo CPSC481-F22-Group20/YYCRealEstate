@@ -1,0 +1,838 @@
+﻿body {
+    padding:0px;
+    margin: 0px;
+    border: 0px solid red;
+}
+.images-column {
+    background: #ddd;
+    width: 50%;
+    height: 600px;
+    margin-left: 25%;
+}
+
+.img {
+    border: 3px solid black;
+    width: 100%;
+    height: 100%;
+}
+
+
+.middleImg {
+    position: absolute;
+    width: 15%;
+    height: 180px;
+    margin-left: 42.5%;
+}
+.left1Img {
+    position: absolute;
+    width: 13%;
+    margin-top: 12px;
+    height: 156px;
+    margin-left: 29%;
+}
+.left2Img {
+    position: absolute;
+    width: 11%;
+    margin-top: 24px;
+    height: 132px;
+    margin-left: 17.5%;
+}
+.right1Img {
+    position: absolute;
+    width: 13%;
+    margin-top: 12px;
+    height: 156px;
+    margin-left: 58%;
+}
+.right2Img {
+    position: absolute;
+    width: 11%;
+    margin-top: 24px;
+    height: 132px;
+    margin-left: 71.5%;
+}
+
+.address {
+    position:absolute;
+    border: 3px solid #ccc;
+    left:20%;
+    background: #ddd;
+    width: 60%;
+    text-align: center;
+    color: black;
+    font-style: italic;
+    text-shadow: 2px 2px 2px gray;
+    font-size: 60px
+}
+.line {
+    position: relative;
+    font-style: italic;
+    text-shadow: 2px 2px 2px gray;
+    font-size: 45px;
+    background: black;
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding-top:10px;
+    height: 15px;
+}
+.c1 {
+    margin-top: 96px;
+    padding: 5px;
+    position: absolute;
+    left: 20%;
+    background: #eee;
+    width: 30%;
+    text-align: center;
+    text-shadow: 1px 2px 2px #aaa;
+    font-size: 25px
+}
+
+.c2 {
+    margin-top: 96px;
+    padding: 5px;
+    position: absolute;
+    left: 50%;
+    background: #ddd;
+    width: 30%;
+    text-align: center;
+    text-shadow: 1px 2px 2px #aaa;
+    font-size: 25px
+}
+
+.c3 {
+    margin-top: 143px;
+    padding: 5px;
+    position: absolute;
+    left: 20%;
+    background: #ddd;
+    width: 30%;
+    text-align: center;
+    text-shadow: 1px 2px 2px #aaa;
+    font-size: 25px
+}
+
+.c9 {
+    margin-top: 143px;
+    padding: 5px;
+    position: absolute;
+    left: 50%;
+    background: #eee;
+    width: 30%;
+    text-align: center;
+    text-shadow: 1px 2px 2px #aaa;
+    font-size: 25px
+}
+
+.c4 {
+    margin-top: 190px;
+    background: #eee;
+    padding: 5px;
+    position: absolute;
+    left: 20%;
+    width: 30%;
+    text-align: center;
+    text-shadow: 1px 2px 2px #aaa;
+    font-size: 25px
+}
+
+.c10 {
+    margin-top: 190px;
+    background: #ddd;
+    padding: 5px;
+    position: absolute;
+    left: 50%;
+    width: 30%;
+    text-align: center;
+    text-shadow: 1px 2px 2px #aaa;
+    font-size: 25px
+}
+
+.c5 {
+    margin-top: 237px;
+    background: #ddd;
+    padding: 5px;
+    position: absolute;
+    left: 20%;
+    width: 30%;
+    text-align: center;
+    text-shadow: 1px 2px 2px #aaa;
+    font-size: 25px
+}
+
+.c11 {
+    margin-top: 237px;
+    background: #eee;
+    padding: 5px;
+    position: absolute;
+    left: 50%;
+    width: 30%;
+    text-align: center;
+    text-shadow: 1px 2px 2px #aaa;
+    font-size: 25px
+}
+
+.c6 {
+    margin-top: 284px;
+    background: #eee;
+    padding: 5px;
+    position: absolute;
+    left: 20%;
+    width: 30%;
+    text-align: center;
+    text-shadow: 1px 2px 2px #aaa;
+    font-size: 25px
+}
+
+.c12 {
+    margin-top: 284px;
+    background: #ddd;
+    padding: 5px;
+    position: absolute;
+    left: 50%;
+    width: 30%;
+    text-align: center;
+    text-shadow: 1px 2px 2px #aaa;
+    font-size: 25px
+}
+
+.c7 {
+    margin-top: 331px;
+    background: #ddd;
+    padding: 5px;
+    position: absolute;
+    left: 20%;
+    width: 30%;
+    text-align: center;
+    text-shadow: 1px 2px 2px #aaa;
+    font-size: 25px
+}
+
+.c13 {
+    margin-top: 331px;
+    background: #eee;
+    padding: 5px;
+    position: absolute;
+    left: 50%;
+    width: 30%;
+    text-align: center;
+    text-shadow: 1px 2px 2px #aaa;
+    font-size: 25px
+}
+.realtor {
+    margin-top: 354.5px;
+    background: #eee;
+    padding: 5px;
+    position: absolute;
+    left: 55%;
+    width: 20%;
+    text-align: center;
+    text-shadow: 1px 2px 2px #aaa;
+    font-size: 25px
+}
+.realtorinformation {
+    border: 1px solid red;
+    margin-top: 166.5px;
+    background: #eee;
+    padding: 5px;
+    position: absolute;
+    left: 40%;
+    width: 20%;
+    text-align: center;
+    text-shadow: 1px 2px 2px #aaa;
+    font-size: 25px
+}
+.CloseRealtor {
+    font-weight: 100;
+    font-style:normal;
+    border: 0px solid red;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    width: 30px;
+    height:30px;
+    background: transparent;
+    text-align: unset;
+    font-size: 15px
+}
+
+.c8 {
+    margin-top: 378px;
+    background: #eee;
+    padding: 5px;
+    position: absolute;
+    left: 20%;
+    width: 30%;
+    text-align: center;
+    text-shadow: 1px 2px 2px #aaa;
+    font-size: 25px
+}
+
+.c14 {
+    margin-top: 378px;
+    background: #ddd;
+    padding: 5px;
+    position: absolute;
+    left: 50%;
+    width: 30%;
+    text-align: center;
+    text-shadow: 1px 2px 2px #aaa;
+    font-size: 25px
+}
+
+
+
+
+
+
+.left-press {
+    position: absolute;
+    left: 25%;
+    top: 70px;
+    width: 20%;
+    height: 600px;
+    background-color: transparent;
+    border: 0px solid transparent;
+    background-image: url(./previous.png);
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    background-size: 50% 30%;
+}
+
+.left-press:hover {
+    background-size: 60% 40%;
+}
+.right-press {
+    position: absolute;
+    right: 25%;
+    top: 70px;
+    width: 20%;
+    height: 600px;
+    background-color: transparent;
+    border: 0px solid transparent;
+    background-image: url(./next.png);
+    background-position-y: 50%;
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-size: 50% 30%;
+}
+
+    .right-press:hover {
+        background-size: 60% 40%;
+    }
+
+
+.page-title {
+    color: black;
+    text-align: center;
+    text-shadow: 2px 2px 2px gray;
+}
+
+.error-msg {
+    color: black;
+    font-size: 70px;
+    font-style: italic;
+    text-align: center;
+    text-shadow: 3px 3px 3px gray;
+}
+
+.listings-btn-column {
+    font-size: 20px;
+    float: left;
+    width: 100%;
+    padding: 10px;
+    text-align: right;
+    height: 70px;
+}
+
+
+.deets {
+    width: 8%;
+    height: 8%;
+
+}
+
+.similar {
+    padding: 10px;
+    background: rgb(0,255,0,0.2);
+}
+
+
+.House-column {
+    display: inline-block;
+    width: 33.33%;
+    padding: 5px;
+}
+
+
+.mapdiv {
+    width: 70%;
+}
+
+/*https://www.w3schools.com/howto/howto_js_collapsible.asp*/
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    float: right;
+    font-size: 20px;
+}
+
+.content {
+    padding: 0 18px;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    display: block;
+}
+
+.mapdiv path {
+    fill: transparent;
+    fill-opacity: 0.7;
+    fill-rule: evenodd;
+    stroke: Black;
+    stroke-width: 1px;
+    stroke-linecap: butt;
+    stroke-linejoin: miter;
+    stroke-opacity: 1
+}
+
+
+.calgary_map {
+    position: fixed;
+    left: 0%;
+}
+
+.Neighborhoods_list {
+    font-size: 30px;
+    float: left;
+    padding: 10px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    background: #aaa;
+    position: fixed;
+    left: 75%;
+    top: 12%;
+    width: 20%;
+    text-align: center;
+}
+
+.mapApply {
+    font-size: 30px;
+    float: left;
+    padding: 10px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    background: #aaa;
+    position: fixed;
+    left: 75%;
+    top: 80%;
+    width: 20%;
+    text-align: center;
+}
+
+div ul {
+    font-weight: 100;
+    font-size: 25px;
+    list-style: none;
+    position: fixed;
+    background: #ddd;
+    left: 75%;
+    top: 18.5%;
+    width: 20%;
+    height: 60%;
+    text-align: left;
+}
+
+div ul {
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.page-title {
+    color: black;
+    text-align: center;
+    font-style: italic;
+    text-shadow: 2px 2px 2px gray;
+    font-size: 100px
+}
+
+
+#discovery-title {
+    color: black;
+    text-align: center;
+    font-style: italic;
+    text-shadow: 1px 1px 1px gray;
+    font-size: 30px
+}
+
+.index-btn-column {
+    font-size: 20px;
+    float: left;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    height: 70px;
+}
+
+.index-full-column {
+    font-size: 25px;
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+filter-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.italic-title {
+    font-style: italic;
+}
+
+.row text {
+    font-size: 15px;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.price {
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+#slider-input-left {
+    overflow: hidden;
+    width: 100%;
+}
+
+#min-text {
+    overflow: hidden;
+    width: 20%;
+    height: auto;
+}
+
+#min-slider {
+    text-align: center;
+    width: 80%;
+}
+
+#max-text {
+    overflow: hidden;
+    width: 20%;
+    height: auto;
+}
+
+#white-space {
+    overflow: hidden;
+    width: 21%;
+    height: auto;
+}
+
+#max-slider {
+    text-align: center;
+    width: 80%;
+}
+
+.one-to-eight {
+    float: left;
+    width: 7.8%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.btn-column {
+    font-size: 25px;
+    float: left;
+    width: 25%;
+    padding: 10px;
+    text-align: center;
+    height: 70px;
+}
+
+.full-column {
+    font-size: 25px;
+    float: left;
+    width: 100%;
+    text-align: center;
+    height: 1px;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    pointer-events: none;
+}
+
+
+
+input[type='range']::-webkit-slider-thumb {
+    pointer-events: auto;
+}
+
+input[type=range] {
+    height: 23px;
+    pointer-events: none;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+}
+
+    input[type=range]:focus {
+        outline: none;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 7px;
+        cursor: pointer;
+        box-shadow: 0px 0px 0px #000000;
+        background: #FF8787;
+        border-radius: 50px;
+        border: 0px solid #000000;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+        border: 3px solid #C90000;
+        height: 23px;
+        width: 23px;
+        border-radius: 50px;
+        background: #FF0000;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -7.5px;
+    }
+
+#max-slider input[type=range]::-webkit-slider-thumb {
+    box-shadow: -10000px 0px 0px 9985px #FF8787;
+}
+
+#min-slider input[type=range]::-webkit-slider-thumb {
+    box-shadow: 10000px 0px 0px 9985px #FF8787;
+}
+
+input[type=range]::-webkit-slider-thumb:before {
+    box-shadow: -80px 80px 0px 65px blue;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #FF8787;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.range-slider-bar {
+    top: -121px;
+    height: 5px;
+    border-radius: 5px;
+    background: blue;
+    position: relative;
+    margin-left: 11.5px;
+    margin-right: 11.5px;
+}
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.range-column-txt input {
+    -moz-appearance: textfield;
+}
+
+.range-price {
+    text-align: center;
+    font-style: italic;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.range-prices {
+    font-weight: 100;
+}
+
+
+input[type="range"]::-webkit-slider-thumb {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+
+
+input[type=range] {
+    pointer-events: none;
+}
+
+    input[type=range]::-webkit-slider-thumb {
+        pointer-events: auto;
+    }
+
+.range-column-txt {
+    float: left;
+    width: 15%;
+    text-align: center;
+}
+
+.range-column-slider {
+    width: 70%;
+    height: 70px;
+    float: left;
+    padding-top: 12px;
+    justify-content: center;
+}
+
+.range-column-prices {
+    position: relative;
+    top: -40px;
+    overflow: visible;
+    float: left;
+    text-align: center;
+    height: 40px;
+    font-style: italic;
+    font-size: 25px;
+}
+
+#slider-input-left {
+    position: absolute;
+    left: 0%;
+    overflow: hidden;
+    width: 90%;
+}
+
+#slider-input-right {
+    top: -58px;
+    position: absolute;
+    right: 0%;
+    overflow: hidden;
+    width: 10%;
+}
+
+#min-text {
+    overflow: hidden;
+    width: 15%;
+    height: 70px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+    #min-text input {
+        overflow: hidden;
+        width: 50%;
+        text-align: center;
+        height: auto;
+    }
+
+#min-slider {
+    position: relative;
+    text-align: center;
+    width: 70%;
+}
+
+#max-text {
+    overflow: hidden;
+    width: 15%;
+    height: 70px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+    #max-text input {
+        overflow: hidden;
+        width: 50%;
+        text-align: center;
+        height: auto;
+    }
+
+#white-space {
+    overflow: hidden;
+    width: 21%;
+    height: auto;
+}
+
+#max-slider {
+    position: relative;
+    text-align: center;
+    width: 70%;
+}
+
+.range-one-to-eight {
+    float: left;
+    width: 7.8%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+input[type=range] {
+    -webkit-appearance: none;
+    pointer-events: none;
+}
+
+
+
+input[type='range']::-webkit-slider-thumb {
+    pointer-events: auto;
+}
+
+input[type=range] {
+    height: 23px;
+    pointer-events: none;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+}
+
+    input[type=range]:focus {
+        outline: none;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 7px;
+        cursor: pointer;
+        box-shadow: 0px 0px 0px #000000;
+        background: #FF8787;
+        border-radius: 50px;
+        border: 0px solid #000000;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+        border: 3px solid #C90000;
+        height: 23px;
+        width: 23px;
+        border-radius: 50px;
+        background: #FF0000;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -8px;
+    }
+
+#max-slider input[type=range]::-webkit-slider-thumb {
+    box-shadow: -10000px 0px 0px 9988.5px #FF8787;
+}
+
+#min-slider input[type=range]::-webkit-slider-thumb {
+    box-shadow: 10000px 0px 0px 9985px #FF8787;
+}
+
+.range-small-redbar {
+    top: -121px;
+    height: 7px;
+    border-radius: 5px;
+    background: #FF8787;
+    position: relative;
+}
