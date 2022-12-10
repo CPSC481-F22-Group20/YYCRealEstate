@@ -1,0 +1,667 @@
+﻿@page "/Details/{data}"
+@inject HttpClient Http
+@inject NavigationManager NavManager
+
+@if(house == 0){
+        <p><em>Loading...</em></p>
+}
+else{
+    <div class="images-column">
+        <img class="img" src=@ImagePath() />
+    </div>
+    <div class="Btn-left">
+        <button class="left-press" onclick=@Previous></button>
+        <button class="right-press" onclick=@Next></button>
+    </div>
+    <br />
+    <div class="img-preview">
+        <div class="middleImg">
+            <img class="img" src=@ImagePath() />
+        </div>
+        <div class="left1Img">
+            <img class="img" src=@ImagePathleft1() />
+        </div>
+        <div class="left2Img">
+            <img class="img" src=@ImagePathleft2() />
+        </div>
+        <div class="right1Img">
+            <img class="img" src=@ImagePathright1() />
+        </div>
+        <div class="right2Img">
+            <img class="img" src=@ImagePathright2() />
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="address">@address</div>
+    <div class="information">
+        @foreach (var prop in all_houses)
+        {
+            if (prop.Id == house)
+            {
+                <p1 class="c1">Details</p1>
+                <p1 class="c2">Neighbourgood Amenities</p1>
+                <p1 class="c3">Price: &#160 &#160 &#160 &#160 $@SelectPrice</p1>
+                <p1 class="c4">Bedrooms: @prop.bedrooms</p1>
+                <p1 class="c5">Bathrooms: @prop.bathrooms</p1>
+                <p1 class="c6">Square Footage: @prop.sqrft ft&#178</p1>
+                if (@prop.dwelling == 1)
+                {
+                    <p1 class="c7">Property Type: Apartment </p1>
+                }
+                if (@prop.dwelling == 2)
+                {
+                    <p1 class="c7">Property Type: Condominium  </p1>
+                }
+                if (@prop.dwelling == 3)
+                {
+                    <p1 class="c7">Property Type: Detached </p1>
+                }
+                if (@prop.dwelling == 4)
+                {
+                    <p1 class="c7">Property Type: Duplex  </p1>
+                }
+
+                <p1 class="c8">Year Built: @prop.year</p1>
+                <p1 class="c9">Neighbourgood: @prop.neighborhoods_name</p1>
+                <p1 class="c10">Schools: 3</p1>
+                <p1 class="c11">Train station: 5 minute walk</p1>
+                <p1 class="c12">Parks/Lakes: 4</p1>
+                <button class="realtor" onclick=@RealtorInfo>Realtor Information</button>
+
+                @if (RealInfo == 1) {
+                <div class="realtorinformation">
+                        <p1 style="font-weight:bold">Realtor Information</p1> <br />
+                        <p1 style="font-style:italic">Jack Does</p1> <br />
+                        <p1 style="font-style:italic">587-385-5739</p1><br />
+                        <p1 style="font-style:italic">jackdoe@gmail.com</p1>
+                        <button class="CloseRealtor" onclick=@RealtorInfo>X</button>
+                </div>
+                }
+
+
+
+
+    }
+        }
+
+
+    </div>
+
+    @for (var i = 0; i < 19; i++)
+   { 
+    <br />
+   }
+
+    <div class="line">Similar Listings</div>
+
+    <br />
+    <br />
+    <br />
+
+    @foreach (var prop in all_houses)
+    {
+        if ((house == 1 && (prop.Id == 2 || prop.Id == 7 || prop.Id ==8)))
+        {
+            <div class="House-column">
+                @if (prop.Id == 2)
+                {
+                    <img src=@ImagePath(@prop.Id) alt="Listing#1" style="width:100%">
+
+                    <br />
+
+                    <br />
+                    <img class="deets" src="Bed.png">
+                    <p1 class="similar">@prop.bedrooms Beds</p1>
+
+                    <br />
+                    <img class="deets" src="Bath.png">
+                    <p1>@prop.bathrooms Baths</p1>
+
+                    <br />
+                    <img class="deets" src="Sqfeet.png">
+                    <p1 class="similar">@FormatInt(@prop.sqrft) ft&#178</p1>
+
+                    <br />
+                    <img class="deets" src="Location.png">
+                    <p1>@prop.neighborhoods_name</p1>
+
+                    <br />
+                    <img class="deets" src="price.png">
+                    <p1 class="similar">$@FormatInt(@prop.price)</p1>
+                }
+                @if (prop.Id == 7)
+                {
+                    <img src=@ImagePath(@prop.Id) alt="Listing#1" style="width:100%">
+
+                    <br />
+
+                    <br />
+                    <img class="deets" src="Bed.png">
+                    <p1 class="similar">@prop.bedrooms Beds</p1>
+
+                    <br />
+                    <img class="deets" src="Bath.png">
+                    <p1 class="similar">@prop.bathrooms Baths</p1>
+
+                    <br />
+                    <img class="deets" src="Sqfeet.png">
+                    <p1 >@FormatInt(@prop.sqrft) ft&#178</p1>
+
+                    <br />
+                    <img class="deets" src="Location.png">
+                    <p1 class="similar">@prop.neighborhoods_name</p1>
+
+                    <br />
+                    <img class="deets" src="price.png">
+                    <p1>$@FormatInt(@prop.price)</p1>
+                }
+                @if (prop.Id == 8)
+                {
+                    <img src=@ImagePath(@prop.Id) alt="Listing#1" style="width:100%">
+
+                    <br />
+
+                    <br />
+                    <img class="deets" src="Bed.png">
+                    <p1 class="similar">@prop.bedrooms Beds</p1>
+
+                    <br />
+                    <img class="deets" src="Bath.png">
+                    <p1 >@prop.bathrooms Baths</p1>
+
+                    <br />
+                    <img class="deets" src="Sqfeet.png">
+                    <p1 class ="similar">@FormatInt(@prop.sqrft) ft&#178</p1>
+
+                    <br />
+                    <img class="deets" src="Location.png">
+                    <p1 class="similar">@prop.neighborhoods_name</p1>
+
+                    <br />
+                    <img class="deets" src="price.png">
+                    <p1>$@FormatInt(@prop.price)</p1>
+                }
+                
+
+                @if (@prop.Id == 1)
+                {
+                    <div class="listings-btn-column">
+                        <button type="button" onclick=@Details1>Detailed View</button>
+                    </div>
+                }
+                else
+                {
+                    @if (@prop.Id == 2)
+                    {
+                        <div class="listings-btn-column">
+                            <button type="button" onclick=@Details2>Detailed View</button>
+                        </div>
+                    }
+                    else
+                    {
+                        @if (@prop.Id == 3)
+                        {
+                            <div class="listings-btn-column">
+                                <button type="button" onclick=@Details3>Detailed View</button>
+                            </div>
+                        }
+                        else
+                        {
+                            @if (@prop.Id == 4)
+                            {
+                                <div class="listings-btn-column">
+                                    <button type="button" onclick=@Details4>Detailed View</button>
+                                </div>
+                            }
+                            else
+                            {
+                                @if (@prop.Id == 5)
+                                {
+                                    <div class="listings-btn-column">
+                                        <button type="button" onclick=@Details5>Detailed View</button>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="listings-btn-column">
+                                        <button type="button">Detailed View</button>
+                                    </div>
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+
+
+            </div>
+
+        }
+
+        if ((house == 2 && (prop.Id == 1 || prop.Id == 9 || prop.Id == 10)))
+        {
+            <div class="House-column">
+                @if (prop.Id == 1)
+                {
+                    <img src=@ImagePath(@prop.Id) alt="Listing#1" style="width:100%">
+
+                    <br />
+
+                    <br />
+                    <img class="deets" src="Bed.png">
+                    <p1 class="similar">@prop.bedrooms Beds</p1>
+
+                    <br />
+                    <img class="deets" src="Bath.png">
+                    <p1>@prop.bathrooms Baths</p1>
+
+                    <br />
+                    <img class="deets" src="Sqfeet.png">
+                    <p1 class="similar">@FormatInt(@prop.sqrft) ft&#178</p1>
+
+                    <br />
+                    <img class="deets" src="Location.png">
+                    <p1>@prop.neighborhoods_name</p1>
+
+                    <br />
+                    <img class="deets" src="price.png">
+                    <p1 class="similar">$@FormatInt(@prop.price)</p1>
+                }
+                @if (prop.Id == 9)
+                {
+                    <img src=@ImagePath(@prop.Id) alt="Listing#1" style="width:100%">
+
+                    <br />
+
+                    <br />
+                    <img class="deets" src="Bed.png">
+                    <p1 class="similar">@prop.bedrooms Beds</p1>
+
+                    <br />
+                    <img class="deets" src="Bath.png">
+                    <p1 class="similar">@prop.bathrooms Baths</p1>
+
+                    <br />
+                    <img class="deets" src="Sqfeet.png">
+                    <p1>@FormatInt(@prop.sqrft) ft&#178</p1>
+
+                    <br />
+                    <img class="deets" src="Location.png">
+                    <p1 class="similar">@prop.neighborhoods_name</p1>
+
+                    <br />
+                    <img class="deets" src="price.png">
+                    <p1>$@FormatInt(@prop.price)</p1>
+                }
+                @if (prop.Id == 10)
+                {
+                    <img src=@ImagePath(@prop.Id) alt="Listing#1" style="width:100%">
+
+                    <br />
+
+                    <br />
+                    <img class="deets" src="Bed.png">
+                    <p1 class="similar">@prop.bedrooms Beds</p1>
+
+                    <br />
+                    <img class="deets" src="Bath.png">
+                    <p1>@prop.bathrooms Baths</p1>
+
+                    <br />
+                    <img class="deets" src="Sqfeet.png">
+                    <p1>@FormatInt(@prop.sqrft) ft&#178</p1>
+
+                    <br />
+                    <img class="deets" src="Location.png">
+                    <p1 class="similar">@prop.neighborhoods_name</p1>
+
+                    <br />
+                    <img class="deets" src="price.png">
+                    <p1>$@FormatInt(@prop.price)</p1>
+                }
+
+
+                @if (@prop.Id == 1)
+                {
+                    <div class="listings-btn-column">
+                        <button type="button" onclick=@Details1>Detailed View</button>
+                    </div>
+                }
+                else
+                {
+                    @if (@prop.Id == 2)
+                    {
+                        <div class="listings-btn-column">
+                            <button type="button" onclick=@Details2>Detailed View</button>
+                        </div>
+                    }
+                    else
+                    {
+                        @if (@prop.Id == 3)
+                        {
+                            <div class="listings-btn-column">
+                                <button type="button" onclick=@Details3>Detailed View</button>
+                            </div>
+                        }
+                        else
+                        {
+                            @if (@prop.Id == 4)
+                            {
+                                <div class="listings-btn-column">
+                                    <button type="button" onclick=@Details4>Detailed View</button>
+                                </div>
+                            }
+                            else
+                            {
+                                @if (@prop.Id == 5)
+                                {
+                                    <div class="listings-btn-column">
+                                        <button type="button" onclick=@Details5>Detailed View</button>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="listings-btn-column">
+                                        <button type="button">Detailed View</button>
+                                    </div>
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+
+
+            </div>
+
+        }
+    
+        if ((house == 3 && (prop.Id == 14 || prop.Id == 15 || prop.Id == 16)))
+        {
+            <div class="House-column">
+                <img src=@ImagePath(@prop.Id) alt="Listing#1" style="width:100%">
+
+                <br />
+
+                <br />
+                <img class="deets" src="Bed.png">
+                <p1>@prop.bedrooms Beds</p1>
+
+                <br />
+                <img class="deets" src="Bath.png">
+                <p1>@prop.bathrooms Baths</p1>
+
+                <br />
+                <img class="deets" src="Sqfeet.png">
+                <p1>@FormatInt(@prop.sqrft) ft&#178</p1>
+
+                <br />
+                <img class="deets" src="Location.png">
+                <p1>@prop.neighborhoods_name</p1>
+
+                <br />
+                <img class="deets" src="price.png">
+                <p1>$@FormatInt(@prop.price)</p1>
+
+                <div class="listings-btn-column">
+                    <button type="button">Detailed View</button>
+                </div>
+            </div>
+
+        }
+
+        if ((house == 4 && (prop.Id == 17 || prop.Id == 18 || prop.Id == 19)))
+        {
+            <div class="House-column">
+                <img src=@ImagePath(@prop.Id) alt="Listing#1" style="width:100%">
+
+                <br />
+
+                <br />
+                <img class="deets" src="Bed.png">
+                <p1>@prop.bedrooms Beds</p1>
+
+                <br />
+                <img class="deets" src="Bath.png">
+                <p1>@prop.bathrooms Baths</p1>
+
+                <br />
+                <img class="deets" src="Sqfeet.png">
+                <p1>@FormatInt(@prop.sqrft) ft&#178</p1>
+
+                <br />
+                <img class="deets" src="Location.png">
+                <p1>@prop.neighborhoods_name</p1>
+
+                <br />
+                <img class="deets" src="price.png">
+                <p1>$@FormatInt(@prop.price)</p1>
+
+                <div class="listings-btn-column">
+                    <button type="button">Detailed View</button>
+                </div>
+
+            </div>
+
+        }
+
+        if ((house == 5 && (prop.Id == 11 || prop.Id == 12 || prop.Id ==13)))
+        {
+            <div class="House-column">
+                <img src=@ImagePath(@prop.Id) alt="Listing#1" style="width:100%">
+
+                <br />
+
+                <br />
+                <img class="deets" src="Bed.png">
+                <p1 >@prop.bedrooms Beds</p1>
+
+                <br />
+                <img class="deets" src="Bath.png">
+                <p1>@prop.bathrooms Baths</p1>
+
+                <br />
+                <img class="deets" src="Sqfeet.png">
+                <p1 >@FormatInt(@prop.sqrft) ft&#178</p1>
+
+                <br />
+                <img class="deets" src="Location.png">
+                <p1>@prop.neighborhoods_name</p1>
+
+                <br />
+                <img class="deets" src="price.png">
+                <p1>$@FormatInt(@prop.price)</p1>
+
+                <div class="listings-btn-column">
+                    <button type="button">Detailed View</button>
+                </div>
+            </div>
+
+        }
+
+
+    }
+
+
+}
+
+@code {
+    [Parameter] public string data { get; set; }
+    int house = 0;
+    int img = 1;
+    int RealInfo = 0;
+    string address = "";
+
+    void Details1()
+    {
+        NavManager.NavigateTo("Details/House1");
+    }
+    void Details2()
+    {
+        NavManager.NavigateTo("Details/House2");
+    }
+    void Details3()
+    {
+        NavManager.NavigateTo("Details/House3");
+    }
+    void Details4()
+    {
+        NavManager.NavigateTo("Details/House4");
+    }
+    void Details5()
+    {
+        NavManager.NavigateTo("Details/House5");
+    }
+
+    void RealtorInfo() {
+        if (RealInfo == 1) { RealInfo = 0; }
+        else {RealInfo = 1;  }
+
+    }
+
+    string ImagePath(int i)
+    {
+        return "House Images/house" + (i).ToString() + "_1.jpg";
+    }
+
+    string FormatInt(int var)
+    {
+        return String.Format("{0:n0}", Int64.Parse(var.ToString()));
+    }
+
+    public House[] all_houses;
+
+    protected override async Task OnInitializedAsync()
+    {
+        all_houses = await Http.GetFromJsonAsync<House[]>("Houses.json");
+
+    }
+
+    protected override void OnParametersSet()
+    {
+        if (data != null)
+        {
+            if (data.ElementAt(5) == '1')
+            {
+                house = 1;
+                address = "381 Saddlelake Drive NE Calgary";
+            }
+            if (data.ElementAt(5) == '2')
+            {
+                house = 2;
+                address = "74 TaraCove Road NE Calgary";
+            }
+            if (data.ElementAt(5) == '3')
+            {
+                house = 3;
+                address = "1311-522 Simonway Drive NW Calgary";
+            }
+            if (data.ElementAt(5) == '4')
+            {
+                house = 4;
+                address = "1309 Nolanland Road NW Calgary";
+            }
+            if (data.ElementAt(5) == '5')
+            {
+                house = 5;
+                address = "1645-936 Sagecreek Road NW Calgary";
+            }
+        }
+        img = 1;
+    }
+    string ImagePath()
+    {
+        return "House Images/house" + (house).ToString() + "_" + (img).ToString() + ".jpg";
+    }
+
+    string ImagePathleft1()
+    {
+        int left1 = img;
+        if (left1 == 1) { left1 = 10; }
+        else { left1--; }
+
+        return "House Images/house" + (house).ToString() + "_" + (left1).ToString() + ".jpg";
+    }
+
+    string ImagePathleft2()
+    {
+
+        int left2 = img;
+        if (left2 == 1) { left2 = 10; }
+        else { left2--; }
+        if (left2 == 1) { left2 = 10; }
+        else { left2--; }
+        return "House Images/house" + (house).ToString() + "_" + (left2).ToString() + ".jpg";
+    }
+
+    string ImagePathright1()
+    {
+
+        int right1 = img;
+        if (right1 == 10) { right1 = 1; }
+        else { right1++; }
+        return "House Images/house" + (house).ToString() + "_" + (right1).ToString() + ".jpg";
+    }
+
+    string ImagePathright2()
+    {
+
+        int right2 = img;
+        if (right2 == 10) { right2 = 1; }
+        else { right2++; }
+        if (right2 == 10) { right2 = 1; }
+        else { right2++; }
+        return "House Images/house" + (house).ToString() + "_" + (right2).ToString() + ".jpg";
+    }
+
+
+    void Previous()
+    {
+        if (img == 1) { img = 10; }
+        else { img--; }
+    }
+
+    void Next()
+    {
+        if (img == 10) { img = 1; }
+        else { img++; }
+    }
+
+    string SelectPrice
+    {
+        get => String.Format("{0:n0}", all_houses.ElementAt(house-1).price);
+    }
+
+    public class House
+    {
+
+        public int Id { get; set; }
+
+        public int dwelling { get; set; }
+
+        public int bedrooms { get; set; }
+
+        public int bathrooms { get; set; }
+
+        public int sqrft { get; set; }
+
+        public int price { get; set; }
+
+        public int neighbornumber { get; set; }
+
+        public string? neighborhoods_name { get; set; }
+
+        public int year { get; set; }
+
+    }
+}
